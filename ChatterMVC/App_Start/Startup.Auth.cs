@@ -58,11 +58,11 @@ namespace ChatterMVC
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "805428145859-eua0q85m71qam7r47ugd5bnnej2avbgd.apps.googleusercontent.com",
+                ClientSecret = "kEb2oqd48m1436FgBs-BGaWz"
+            });
         }
     }
 }
