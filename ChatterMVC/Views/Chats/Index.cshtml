@@ -16,12 +16,15 @@
 
 @section Scripts {
     <script> 
-        var jsonTest = {"firstName" : "Bob", "lastName" : "Sauce", "children" : 
-            [{ "firstName": "Barbie", "age": 19 }, { "firstName": "Ron", "age": null }]}
+        $.get("@Url.Action("TestJson", "Chats")", function (serverResponse) {
+            var jsonTest = JSON.parse(serverResponse);
+            console.log(jsonTest);
+            $("#response").text(jsonTest.firstName);
+        });
 
 
 
-        $("#response").text(jsonTest.children[1].firstName);
+        
     </script>
     }
 
