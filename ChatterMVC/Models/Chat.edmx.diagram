@@ -5,7 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9843cde1f0b945f6b859e05558d4f393" Name="Diagram1">
-        <EntityTypeShape EntityType="ChatterModel.Chat" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatterModel.AspNetRole" PointX="3.75" PointY="2.5" Width="1.5" />
+        <EntityTypeShape EntityType="ChatterModel.AspNetUserClaim" PointX="8.25" PointY="3.625" Width="1.5" />
+        <EntityTypeShape EntityType="ChatterModel.AspNetUserLogin" PointX="8.25" PointY="1" Width="1.5" />
+        <EntityTypeShape EntityType="ChatterModel.AspNetUser" PointX="6" PointY="1.375" Width="1.5" />
+        <AssociationConnector Association="ChatterModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ChatterModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ChatterModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="ChatterModel.Chat" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="ChatterModel.FK_Chat_AspNetUsers" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

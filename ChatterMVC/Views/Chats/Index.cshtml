@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ChatterMVC.Models.Chat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<div id="response"></div>
+<button id="getChats" class="btn btn primary">Get Chats</button>
+
+@section Scripts {
+    <script> 
+        var jsonTest = {"firstName" : "Bob", "lastName" : "Sauce", "children" : 
+            [{ "firstName": "Barbie", "age": 19 }, { "firstName": "Ron", "age": null }]}
+
+
+
+        $("#response").text(jsonTest.children[1].firstName);
+    </script>
+    }
+
+
+
+
+
+
+
+
+
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChatMessage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChatMessage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ChatID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ChatID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ChatID })
+        </td>
+    </tr>
+}
+
+</table>*@
